@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chanikya Sai Kumar — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream: #F5F2ED;
+  --cream2: #EDE9E2;
+  --white: #FDFCFA;
+  --ink: #1A1814;
+  --ink2: #3D3A35;
+  --gray: #8A8780;
+  --line: #DDD9D2;
+  --green: #2D5016;
+  --green-lt: #EEF3E8;
+  --gold: #B8860B;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: var(--green); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(245,242,237,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 64px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.nav-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.nav-brand-sub {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  color: var(--gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nav-center {
+  display: flex;
+  gap: 36px;
+}
+.nav-center a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-center a:hover { color: var(--green); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  color: var(--green);
+  letter-spacing: 0.05em;
+}
+.nav-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50% { opacity:0.4; }
+}
+
+/* HERO */
+#hero {
+  padding-top: 68px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.hero-top {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-main {
+  padding: 80px 64px 60px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 6vw, 96px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: var(--ink);
+  margin-bottom: 36px;
+}
+.hero-name .line2 { font-style: italic; color: var(--green); }
+.hero-intro {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.75;
+  max-width: 520px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+.hero-intro strong { color: var(--ink2); font-weight: 500; }
+.hero-actions { display: flex; gap: 14px; align-items: center; }
+.btn-a {
+  font-size: 13px; font-weight: 500;
+  padding: 12px 28px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+.btn-a:hover { background: #1e3a0e; }
+.btn-b {
+  font-size: 13px; font-weight: 500;
+  padding: 12px 28px;
+  border: 1px solid var(--line);
+  color: var(--ink2);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-b:hover { border-color: var(--green); color: var(--green); }
+
+.hero-side {
+  padding: 80px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
+}
+.hero-side-stat {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-side-stat:last-child { border-bottom: none; padding-bottom: 0; }
+.hsn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.hsl { font-size: 13px; color: var(--gray); margin-top: 4px; }
+.hsd {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--line);
+  margin-top: 2px;
+  letter-spacing: 0.05em;
+}
+
+.hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid var(--line);
+}
+.hero-role-pill {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray);
+  letter-spacing: 0.05em;
+  border-right: 1px solid var(--line);
+  transition: all 0.2s;
+}
+.hero-role-pill:last-child { border-right: none; }
+.hero-role-pill:hover { background: var(--green-lt); color: var(--green); }
+.hero-role-pill.active { background: var(--green); color: #fff; }
+
+/* SECTIONS */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 64px; }
+.sec { padding: 96px 0; border-bottom: 1px solid var(--line); }
+.sh {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+.sh-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  padding-top: 12px;
+}
+.sh-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+/* ABOUT */
+.about-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.about-spacer {}
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
+}
+.about-text {
+  font-size: 16px;
+  color: var(--ink2);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.about-text p { margin-bottom: 20px; }
+.about-text strong { color: var(--ink); font-weight: 500; }
+.about-details { display: flex; flex-direction: column; gap: 20px; }
+.detail-row {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.detail-val { font-size: 13px; font-weight: 500; color: var(--ink2); }
+
+/* EDUCATION */
+.edu-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.edu-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.edu-card-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  padding: 32px 36px;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.edu-degree {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+.edu-institution {
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 400;
+}
+.edu-period-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  background: var(--green-lt);
+  border: 1px solid rgba(45,80,22,0.15);
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.edu-card-bottom {
+  padding: 24px 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.edu-stat-block { }
+.edu-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.edu-stat-val {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink2);
+}
+.edu-coursework {
+  padding: 20px 36px;
+  border-top: 1px solid var(--line);
+  background: var(--cream);
+}
+.edu-coursework-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.edu-course-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.edu-pill {
+  font-size: 12px;
+  padding: 3px 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--gray);
+  border-radius: 100px;
+}
+
+/* EXPERIENCE */
+.exp-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.exp-list { display: flex; flex-direction: column; }
+.exp-entry {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s;
+}
+.exp-entry:first-child { padding-top: 0; }
+.exp-entry:last-child { border-bottom: none; }
+.exp-entry:hover { background: rgba(45,80,22,0.02); }
+.ee-left {}
+.ee-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.ee-co { font-size: 13px; color: var(--gray); }
+.ee-right {}
+.ee-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+.ee-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+.ee-bullets li {
+  font-size: 14px;
+  color: var(--gray);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.ee-bullets li::before { content: '·'; position: absolute; left: 0; color: var(--green); font-size: 18px; line-height: 1.2; }
+.ee-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ee-tag {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  padding: 2px 10px;
+  background: var(--cream2);
+  color: var(--gray);
+  border-radius: 100px;
+  border: 1px solid var(--line);
+}
+
+/* PROJECTS */
+.proj-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.proj-list { display: flex; flex-direction: column; gap: 16px; }
+.proj-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: start;
+  padding: 32px 36px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.proj-item:hover {
+  border-color: var(--green);
+  box-shadow: 0 4px 24px rgba(45,80,22,0.08);
+  transform: translateY(-2px);
+}
+.pi-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.pi-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+.pi-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.pi-stack { display: flex; flex-wrap: wrap; gap: 5px; }
+.pi-pill {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  padding: 2px 10px;
+  background: var(--green-lt);
+  color: var(--green);
+  border-radius: 100px;
+  border: 1px solid rgba(45,80,22,0.15);
+}
+.pi-arrow {
+  font-size: 20px;
+  color: var(--line);
+  transition: color 0.2s, transform 0.2s;
+  margin-top: 4px;
+}
+.proj-item:hover .pi-arrow { color: var(--green); transform: translate(3px,-3px); }
+.proj-item.featured { background: var(--green); border-color: var(--green); }
+.proj-item.featured .pi-num { color: rgba(255,255,255,0.6); }
+.proj-item.featured .pi-title { color: #fff; }
+.proj-item.featured .pi-desc { color: rgba(255,255,255,0.7); }
+.proj-item.featured .pi-pill { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.2); }
+.proj-item.featured .pi-arrow { color: rgba(255,255,255,0.4); }
+.proj-item.featured:hover .pi-arrow { color: #fff; }
+
+/* SKILLS */
+.skills-layout-wrap {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.skill-box {
+  background: var(--white);
+  padding: 28px 32px;
+  transition: background 0.2s;
+}
+.skill-box:hover { background: var(--cream2); }
+.sb-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.sb-items { display: flex; flex-direction: column; gap: 7px; }
+.sb-item {
+  font-size: 13px;
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sb-item::before { content: ''; width: 3px; height: 3px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+
+/* CERTS */
+.certs-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.cert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.cert-card:hover { border-color: var(--green); }
+.cert-mark {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.cert-cn { font-size: 13px; font-weight: 500; color: var(--ink2); margin-bottom: 3px; line-height: 1.4; }
+.cert-ci { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); }
+.cert-cd { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--green); margin-top: 3px; }
+
+/* CONTACT */
+#contact { background: var(--ink); padding: 100px 0; }
+.contact-wrap { max-width: 1240px; margin: 0 auto; padding: 0 64px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.c-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.c-head {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+.c-head em { font-style: italic; color: var(--green); filter: brightness(1.4); }
+.c-sub {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.75;
+  font-weight: 300;
+}
+.c-right { padding-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+.c-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.c-link:hover { border-color: var(--green); background: rgba(45,80,22,0.1); }
+.c-link-label { font-size: 12px; font-family: 'DM Mono', monospace; color: #555; letter-spacing: 0.05em; text-transform: uppercase; }
+.c-link-val { font-size: 14px; font-weight: 500; color: #ccc; }
+.c-link-arr { color: #444; font-size: 16px; transition: all 0.2s; }
+.c-link:hover .c-link-arr { color: var(--green); transform: translate(3px,-3px); }
+.c-footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.cf-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.cf-copy { font-size: 11px; font-family: 'DM Mono', monospace; color: #444; }
+
+@media(max-width:900px){
+  nav { padding: 0 24px; }
+  .nav-center { display: none; }
+  #hero { padding-top: 68px; }
+  .hero-top { grid-template-columns: 1fr; }
+  .hero-main { padding: 40px 24px; }
+  .hero-side { padding: 32px 24px; flex-direction: row; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--line); }
+  .hero-side-stat { border-bottom: none; padding-right: 20px; }
+  .hero-bottom { grid-template-columns: 1fr 1fr; }
+  .wrap { padding: 0 24px; }
+  .sh { grid-template-columns: 1fr; gap: 12px; }
+  .about-layout, .exp-layout, .proj-layout, .skills-layout-wrap, .certs-layout { grid-template-columns: 1fr; gap: 24px; }
+  .about-content { grid-template-columns: 1fr; gap: 32px; }
+  .exp-entry { grid-template-columns: 1fr; gap: 8px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-wrap, .c-footer { padding-left: 24px; padding-right: 24px; }
+  .c-footer { flex-direction: column; gap: 16px; text-align: center; }
+}
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-github {
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.nav-github:hover { color: var(--green); }
+ 
+.nav-resume-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: var(--ink2);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-resume-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-lt);
+}
+
+.btn-c {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border: 1px solid var(--line);
+  color: var(--gray);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.02em;
+}
+.btn-c:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-lt);
+}
+a.nav-brand { text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-brand">
+    <div class="nav-brand-name">Chanikya Sai Kumar</div>
+    <div class="nav-brand-sub"></div>
+  </a>
+  <div class="nav-center">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right-group">
+ 
+  <!-- GitHub Icon Link -->
+  <a href="https://github.com/Chanikyasaikumar"
+     target="_blank"
+     class="nav-github"
+     title="GitHub Profile">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </svg>
+  </a>
+ 
+  <!-- Resume Download Button -->
+  <a href="https://drive.google.com/uc?export=download&id=1nzcLJ_pgshh6eoavl3xf4wMmyWnMdGu9"
+     class="nav-resume-btn"
+     download>
+    ⬇️ Download CV
+  </a>
+ 
+  <!-- Keep your existing available-for-work dot here -->
+  <!-- <div class="nav-right">
+    <div class="nav-dot"></div>
+    Available for work
+  </div> -->
+ 
+</div>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-top">
+    <div class="hero-main">
+      <div class="hero-label">Fresher · B.Tech CSE · Class of 2025</div>
+      <h1 class="hero-name">
+        Chanikya<br/>
+        <span class="line2">Sai Kumar</span><br/>
+        Devarasetty
+      </h1>
+      <p class="hero-intro">
+        A <strong>versatile tech graduate</strong> with 5 internships and 4 real-world projects spanning <strong>data analytics</strong>, <strong>web development</strong>, <strong>Python automation</strong>, and <strong>AI tooling</strong>. Ready to contribute from day one.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-a">View My Work</a>
+        <a href="#contact" class="btn-b">Get in Touch</a>
+      
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hero-side-stat">
+        <div class="hsn">5</div> 
+        <div class="hsl">Internships completed</div>
+        <div class="hsd">GVS · Ozibook · Hunar · InternPe · CodSoft</div>
+      </div>
+      <div class="hero-side-stat">
+        <div class="hsn">4</div>
+        <div class="hsl">Projects shipped</div>
+        <div class="hsd">AI · Full-Stack · Automation · Backend</div>
+      </div>
+      <div class="hero-side-stat">
+        <div class="hsn">8</div>
+        <div class="hsl">Certifications earned</div>
+        <div class="hsd">AWS · McKinsey · Cisco · IBM · Accenture</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-role-pill active">Data Analyst</div>
+    <div class="hero-role-pill">Web Developer</div>
+    <div class="hero-role-pill">Python Dev</div>
+    <div class="hero-role-pill">AI Engineer</div>
+    <div class="hero-role-pill">Automation</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="wrap"><section class="sec" id="about">
+  <div class="sh"><span class="sh-num">01 — About</span><h2 class="sh-title">Who I Am</h2></div>
+  <div class="about-layout">
+    <div class="about-spacer"></div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm <strong>Chanikya Sai Kumar</strong> — a Computer Science graduate from Manav Rachna International Institute of Research & Studies who moves fluently across the full tech stack.</p>
+        <p>My work spans <strong>data analytics and dashboards</strong>, <strong>full-stack web applications</strong>, <strong>Python automation pipelines</strong>, and <strong>AI-powered tools</strong> — giving me a versatility that most freshers don't have.</p>
+        <p>From Power BI dashboards at Ozibook to full-stack apps at GVS India, from 50%+ effort reduction automation at Hunar Intern to an <strong>AI hiring agent using Gemini 2.5 Flash</strong> — I bring real, hands-on experience to every role.</p>
+      </div>
+      <div class="about-details">
+        <div class="detail-row"><div class="detail-label">Education</div><div class="detail-val">B.Tech - Computer Science & Engineering</div></div>
+        <div class="detail-row"><div class="detail-label">Location</div><div class="detail-val">Hyderabad, Telangana, India</div></div>
+        <div class="detail-row"><div class="detail-label">Status</div><div class="detail-val">Actively seeking full-time roles</div></div>
+        <div class="detail-row"><div class="detail-label">Open To</div><div class="detail-val">Data · Web · Software · AI · Automation</div></div>
+        <div class="detail-row"><div class="detail-label">Email</div><div class="detail-val" style="font-size:12px;word-break:break-all;">chanikya668@gmail.com</div></div>
+      </div>
+    </div>
+  </div>
+</section></div>
+
+<!-- EDUCATION -->
+<div style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<div class="wrap"><section class="sec" id="education">
+  <div class="sh"><span class="sh-num">02 — Education</span><h2 class="sh-title">Where I Studied</h2></div>
+  <div class="edu-layout">
+    <div></div>
+    <div class="edu-card">
+      <div class="edu-card-top">
+        <div>
+          <div class="edu-degree">Bachelor of Technology — Computer Science & Engineering</div>
+          <div class="edu-institution">Manav Rachna International Institute of Research & Studies · Faridabad, Haryana</div>
+        </div>
+        <div class="edu-period-badge">Sep 2021 — Jun 2025</div>
+      </div>
+      <div class="edu-card-bottom">
+        <div class="edu-stat-block">
+          <div class="edu-stat-label">Degree</div>
+          <div class="edu-stat-val">B.Tech in CSE</div>
+        </div>
+        <div class="edu-stat-block">
+          <div class="edu-stat-label">CGPA</div>
+          <div class="edu-stat-val">6.32 / 10</div>
+        </div>
+        <div class="edu-stat-block">
+          <div class="edu-stat-label">Graduated</div>
+          <div class="edu-stat-val">June 2025</div>
+        </div>
+      </div>
+      <div class="edu-coursework">
+        <div class="edu-coursework-label">Relevant Coursework</div>
+        <div class="edu-course-pills">
+          <span class="edu-pill">Data Structures</span>
+          <span class="edu-pill">Database Management</span>
+          <span class="edu-pill">Software Engineering</span>
+          <span class="edu-pill">Web Development</span>
+          <span class="edu-pill">Operating Systems</span>
+          <span class="edu-pill">Computer Networks</span>
+          <span class="edu-pill">SDLC & System Design</span>
+          <span class="edu-pill">Python Programming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></div>
+</div>
+
+<!-- EXPERIENCE -->
+<div style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<div class="wrap"><section class="sec" id="experience">
+  <div class="sh"><span class="sh-num">03 — Experience</span><h2 class="sh-title">Where I've Worked</h2></div>
+  <div class="exp-layout">
+    <div></div>
+    <div class="exp-list">
+      <div class="exp-entry">
+        <div class="ee-left"><div class="ee-period">Jan — May 2025</div><div class="ee-co">GVS India Pvt. Ltd. · Hyderabad</div></div>
+        <div class="ee-right">
+          <div class="ee-title">Full-Stack Web Developer</div>
+          <ul class="ee-bullets">
+            <li>Built responsive web apps using Django / Flask, HTML/CSS, JavaScript</li>
+            <li>Improved website load time by <strong style="color:var(--ink)">15%</strong> through frontend optimization</li>
+            <li>Managed version control via Git/GitHub across collaborative SDLC</li>
+          </ul>
+          <div class="ee-tags"><span class="ee-tag">Flask</span><span class="ee-tag">Python</span><span class="ee-tag">HTML/CSS</span><span class="ee-tag">Git</span></div>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="ee-left"><div class="ee-period">Oct 2024 — Jan 2025</div><div class="ee-co">Ozibook</div></div>
+        <div class="ee-right">
+          <div class="ee-title">Business Analyst</div>
+          <ul class="ee-bullets">
+            <li>Translated stakeholder needs into clear user stories and documentation</li>
+            <li>Power BI & Excel dashboards identifying <strong style="color:var(--ink)">4–6% efficiency gains</strong></li>
+          </ul>
+          <div class="ee-tags"><span class="ee-tag">Business Strategy</span><span class="ee-tag">Excel</span><span class="ee-tag">Requirement Gathering</span></div>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="ee-left"><div class="ee-period">Jul — Sep 2024</div><div class="ee-co">Hunar Intern</div></div>
+        <div class="ee-right">
+          <div class="ee-title">Python Developer</div>
+          <ul class="ee-bullets">
+            <li>Automation scripts reducing manual data effort by <strong style="color:var(--ink)">50%+</strong></li>
+            <li>Optimized codebase — reduced execution time by <strong style="color:var(--ink)">20%</strong></li>
+            <li>Integrated systems via API calls for scalable data access</li>
+          </ul>
+          <div class="ee-tags"><span class="ee-tag">Python</span><span class="ee-tag">Automation</span><span class="ee-tag">APIs</span></div>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="ee-left"><div class="ee-period">Jul 2024</div><div class="ee-co">InternPe · Jaipur</div></div>
+        <div class="ee-right">
+          <div class="ee-title">Python Developer</div>
+          <ul class="ee-bullets"><li>Python projects demonstrating data manipulation and problem-solving</li></ul>
+          <div class="ee-tags"><span class="ee-tag">Python</span><span class="ee-tag">Data Manipulation</span></div>
+        </div>
+      </div>
+      <div class="exp-entry">
+        <div class="ee-left"><div class="ee-period">Jun — Jul 2024</div><div class="ee-co">CodSoft · Kolkata</div></div>
+        <div class="ee-right">
+          <div class="ee-title">Data Science Intern</div>
+          <ul class="ee-bullets">
+            <li>ML projects: Iris Classification, Sales Prediction, Titanic Survival Prediction</li>
+            <li>Full ML lifecycle — preprocessing, training, evaluation</li>
+          </ul>
+          <div class="ee-tags"><span class="ee-tag">Python</span><span class="ee-tag">Machine Learning</span><span class="ee-tag">Statistical Modeling</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></div>
+</div>
+
+
+<style>
+/* Project link buttons */
+.pi-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.pi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 100px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+/* GitHub button — outline */
+.pi-btn-github {
+  border: 1px solid var(--line);
+  color: var(--ink2);
+  background: transparent;
+}
+.pi-btn-github:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: var(--cream2);
+}
+/* Live Demo button — green filled */
+.pi-btn-live {
+  border: 1px solid var(--green);
+  color: var(--green);
+  background: var(--green-lt);
+}
+.pi-btn-live:hover {
+  background: var(--green);
+  color: #fff;
+}
+/* Not deployed tag */
+.pi-btn-inactive {
+  border: 1px solid var(--line);
+  color: var(--gray);
+  background: transparent;
+  cursor: default;
+  opacity: 0.6;
+}
+/* Featured card overrides */
+.proj-item.featured .pi-btn-github {
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.8);
+}
+.proj-item.featured .pi-btn-github:hover {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+.proj-item.featured .pi-btn-live {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+.proj-item.featured .pi-btn-live:hover {
+  background: rgba(255,255,255,0.28);
+}
+.proj-item.featured .pi-btn-inactive {
+  border-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
+}
+
+/* GitHub SVG icon */
+.gh-icon {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+</style>
+
+<!-- Projects Section HTML -->
+<div class="wrap">
+  <section class="sec" id="projects">
+
+    <div class="sh">
+      <span class="sh-num">04 — Projects</span>
+      <h2 class="sh-title">What I've Built</h2>
+    </div>
+
+    <div class="proj-layout">
+      <div></div>
+      <div class="proj-list">
+
+        <!-- PROJECT 01 — GenoTek (Featured) -->
+        <!-- STATUS: Change pi-btn-live href if live, or remove it if not -->
+        <div class="proj-item featured">
+          <div>
+            <div class="pi-num">01 — Featured</div>
+            <div class="pi-title">GenoTek — AI Hiring Agent</div>
+            <div class="pi-desc">
+              Autonomous AI agent built on Gemini 2.5 Flash that ranks resumes against job
+              descriptions and detects AI-generated candidate responses — reducing manual
+              screening effort significantly.
+            </div>
+            <div class="pi-stack">
+              <span class="pi-pill">Python</span>
+              <span class="pi-pill">Gemini 2.5 Flash API</span>
+              <span class="pi-pill">NLP</span>
+              <span class="pi-pill">AI Agents</span>
+            </div>
+            <div class="pi-links">
+              <a href="https://github.com/Chanikyasaikumar/Hiring_Agent.git"
+                 target="_blank" class="pi-btn pi-btn-github">
+                <svg class="gh-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+              <!-- OPTION A — Live: -->
+              <!-- <a href="https://YOUR_LIVE_URL.com" target="_blank" class="pi-btn pi-btn-live">● Live Demo ↗</a> -->
+              <!-- OPTION B — Not live: -->
+              <span class="pi-btn pi-btn-inactive">Not deployed</span>
+            </div>
+          </div>
+          <div class="pi-arrow">↗</div>
+        </div>
+
+        <!-- PROJECT 02 — SpendWise -->
+        <div class="proj-item">
+          <div>
+            <div class="pi-num">02</div>
+            <div class="pi-title">SpendWise — Expense Tracker</div>
+            <div class="pi-desc">
+              Full-stack personal finance tool with budget vs. spend dashboards and
+              subscription renewal notifications.
+            </div>
+            <div class="pi-stack">
+              <span class="pi-pill">Flask</span>
+              <span class="pi-pill">React.js</span>
+              <span class="pi-pill">SQL</span>
+            </div>
+                        <div class="pi-links">
+              <!-- GitHub link — always show -->
+              <a href="https://github.com/Chanikyasaikumar/Spendwise.git"
+                 target="_blank" class="pi-btn pi-btn-github">
+                <svg class="gh-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                GitHub
+              </a>
+              <!-- OPTION A — If project is LIVE, use this: -->
+              <a href="https://spendwise-six-jet.vercel.app/" target="_blank" class="pi-btn pi-btn-live">
+                ● Live Demo ↗
+              </a>
+              <!-- OPTION B — If project is NOT live, use this instead of above: -->
+              <!-- <span class="pi-btn pi-btn-inactive">Not deployed</span> -->
+            </div>
+          </div>
+          <div class="pi-arrow">↗</div>
+        </div>
+
+        <!-- PROJECT 03 — Automated Task & Notification System -->
+        <div class="proj-item">
+          <div>
+            <div class="pi-num">03</div>
+            <div class="pi-title">Automated Task & Notification System</div>
+            <div class="pi-desc">
+              Email-to-Sheets Python automation pipeline with custom alert triggers
+              via Google Cloud APIs. Zero manual effort.
+            </div>
+            <div class="pi-stack">
+              <span class="pi-pill">Python</span>
+              <span class="pi-pill">Google Cloud APIs</span>
+              <span class="pi-pill">Gmail API</span>
+            </div>
+            <div class="pi-links">
+              <a href="https://github.com/Chanikyasaikumar/gmail-to-sheets.git"
+                 target="_blank" class="pi-btn pi-btn-github">
+                <svg class="gh-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+              <!-- OPTION A — Live: -->
+              <!-- <a href="https://YOUR_LIVE_URL.com" target="_blank" class="pi-btn pi-btn-live">● Live Demo ↗</a> -->
+              <!-- OPTION B — Not live: -->
+              <span class="pi-btn pi-btn-inactive">Not deployed</span>
+            </div>
+          </div>
+          <div class="pi-arrow">↗</div>
+        </div>
+
+        <!-- PROJECT 04 — Library Management System -->
+        <div class="proj-item">
+          <div>
+            <div class="pi-num">04</div>
+            <div class="pi-title">Library Management System</div>
+            <div class="pi-desc">
+              Flask + MongoDB backend app for library operations — book records,
+              user management, and issue/return tracking.
+            </div>
+            <div class="pi-stack">
+              <span class="pi-pill">Flask</span>
+              <span class="pi-pill">MongoDB</span>
+              <span class="pi-pill">Python</span>
+            </div>
+                        <div class="pi-links">
+              <!-- GitHub link — always show -->
+              <a href="https://github.com/Chanikyasaikumar/Library-Management-System.git"
+                 target="_blank" class="pi-btn pi-btn-github">
+                <svg class="gh-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                GitHub
+              </a>
+              <!-- OPTION A — If project is LIVE, use this: -->
+              <a href="https://library-management-system-64bk.onrender.com" target="_blank" class="pi-btn pi-btn-live">
+                ● Live Demo ↗
+              </a>
+              <!-- OPTION B — If project is NOT live, use this instead of above: -->
+              <!-- <span class="pi-btn pi-btn-inactive">Not deployed</span> -->
+            </div>
+          </div>
+          <div class="pi-arrow">↗</div>
+        </div>
+
+      </div><!-- end proj-list -->
+    </div><!-- end proj-layout -->
+
+  </section>
+</div>
+
+
+<!-- SKILLS -->
+<div style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<div class="wrap"><section class="sec" id="skills">
+  <div class="sh"><span class="sh-num">05 — Skills</span><h2 class="sh-title">What I Know</h2></div>
+  <div class="skills-layout-wrap">
+    <div></div>
+    <div class="skills-grid">
+      <div class="skill-box"><div class="sb-label">Languages</div><div class="sb-items"><span class="sb-item">Python</span><span class="sb-item">SQL</span><span class="sb-item">JavaScript</span></div></div>
+      <div class="skill-box"><div class="sb-label">Web Development</div><div class="sb-items"><span class="sb-item">Flask</span><span class="sb-item">HTML5 / CSS3</span><span class="sb-item">React.js</span></div></div>
+      <div class="skill-box"><div class="sb-label">Data & Analytics</div><div class="sb-items"><span class="sb-item">Tableau · Power BI</span><span class="sb-item">Pandas · NumPy</span><span class="sb-item">EDA · ETL Pipelines</span></div></div>
+      <div class="skill-box"><div class="sb-label">Databases</div><div class="sb-items"><span class="sb-item">SQL / RDBMS</span><span class="sb-item">MongoDB</span><span class="sb-item">Microsoft Excel</span></div></div>
+      <div class="skill-box"><div class="sb-label">Tools & Cloud</div><div class="sb-items"><span class="sb-item">Git / GitHub</span><span class="sb-item">Google Cloud APIs</span><span class="sb-item">AWS Cloud</span></div></div>
+      <div class="skill-box"><div class="sb-label">Core Concepts</div><div class="sb-items"><span class="sb-item">SDLC · System Design</span><span class="sb-item">ML Lifecycle</span><span class="sb-item">Automation · Business Analysis</span></div></div>
+    </div>
+  </div>
+</section></div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="wrap"><section class="sec" id="certifications">
+  <div class="sh"><span class="sh-num">06 — Certifications</span><h2 class="sh-title">Credentials</h2></div>
+  <div class="certs-layout">
+    <div></div>
+    <div class="certs-grid">
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">Data Analytics & Visualization Job Simulation</div><div class="cert-ci">Accenture (via Forage)</div><div class="cert-cd">Apr 2024</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">Data Science Job Simulation</div><div class="cert-ci">BCG X (via Forage)</div><div class="cert-cd">Apr 2024</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">Excel for Data & Analytics</div><div class="cert-ci">Chegg India</div><div class="cert-cd">May 2024</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">SQL and Relational Databases 101</div><div class="cert-ci">Cognitive Class (IBM)</div><div class="cert-cd">Jul 2024</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">AWS Educate Introduction to Cloud 101</div><div class="cert-ci">Amazon Web Services</div><div class="cert-cd">Apr 2026</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">McKinsey Forward Program</div><div class="cert-ci">McKinsey & Company</div><div class="cert-cd">Dec 2025</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">Data Analyst Essentials</div><div class="cert-ci">Cisco Networking Academy</div><div class="cert-cd">Jun 2024</div></div></div>
+      <div class="cert-card"><div class="cert-mark"></div><div><div class="cert-cn">Advanced Git & Version Control Milestone</div><div class="cert-ci">KultureHire</div><div class="cert-cd">Jan 2026</div></div></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="c-eyebrow">Let's work together</div>
+        <div class="c-head">Open to<br/><em>great roles.</em></div>
+        <p class="c-sub">Looking for full-time opportunities in Data Analytics, Web Development, Software Engineering, AI & Automation. Open to hybrid and remote roles across India.</p>
+      </div>
+      <div class="c-right">
+        <a href="mailto:chanikya668@gmail.com" class="c-link">
+          <div><div class="c-link-label">Email</div><div class="c-link-val">Send a message</div></div>
+          <div class="c-link-arr">↗</div>
+        </a>
+        <a href="https://linkedin.com/in/chanikya-sai-kumar" target="_blank" class="c-link">
+          <div><div class="c-link-label">LinkedIn</div><div class="c-link-val">Chanikya Sai Kumar Devarasetty</div></div>
+          <div class="c-link-arr">↗</div>
+        </a>
+        <a href="tel:+91-7815826664" class="c-link">
+          <div><div class="c-link-label">Phone</div><div class="c-link-val">+91-78158 26664</div></div>
+          <div class="c-link-arr">↗</div>
+        </a>
+        <a href="https://github.com/Chanikyasaikumar"
+        target="_blank"
+        class="c-link">
+      <div>
+    <div class="c-link-label">GitHub</div>
+    <div class="c-link-val">Chanikya</div>
+  </div>
+  <div class="c-link-arr">↗</div>
+</a>
+      </div>
+    </div>
+  </div>
+  <div class="c-footer" style="margin-top:80px; padding-top:32px; border-top:1px solid #1a1a1a; display:flex; justify-content:space-between; align-items:center;">
+    <div class="cf-brand">Chanikya Sai Kumar</div>
+    <div class="cf-copy">© 2025 · Hyderabad, India</div>
+    <div class="cf-copy">All rights reserved</div>
+  </div>
+</section>
+
+</body>
+</html>
