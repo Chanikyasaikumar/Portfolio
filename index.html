@@ -1004,33 +1004,34 @@ a.nav-brand { text-decoration: none; }
       <div></div>
       <div class="proj-list">
 
-        <!-- PROJECT 01 — GenoTek (Featured) -->
-        <!-- STATUS: Change pi-btn-live href if live, or remove it if not -->
+        <!-- PROJECT 01 — Daybook (Featured, newest) -->
         <div class="proj-item featured">
           <div>
             <div class="pi-num">01 — Featured</div>
-            <div class="pi-title">GenoTek — AI Hiring Agent</div>
+            <div class="pi-title">Daybook — Personal Journaling App</div>
             <div class="pi-desc">
-              Autonomous AI agent built on Gemini 2.5 Flash that ranks resumes against job
-              descriptions and detects AI-generated candidate responses — reducing manual
-              screening effort significantly.
+              Full-stack personal journaling web app with JWT auth, a streak/MindCoins
+              reward economy, mood tagging, and an AI journaling companion (Aspira)
+              powered by the Groq API. Most technically complex project to date.
             </div>
             <div class="pi-stack">
-              <span class="pi-pill">Python</span>
-              <span class="pi-pill">Gemini 2.5 Flash API</span>
-              <span class="pi-pill">NLP</span>
-              <span class="pi-pill">AI Agents</span>
+              <span class="pi-pill">FastAPI</span>
+              <span class="pi-pill">MongoDB Atlas</span>
+              <span class="pi-pill">Groq API</span>
+              <span class="pi-pill">JWT Auth</span>
             </div>
             <div class="pi-links">
-              <a href="https://github.com/Chanikyasaikumar/Hiring_Agent.git"
+              <a href="https://github.com/Chanikyasaikumar/daybook-backend"
                  target="_blank" class="pi-btn pi-btn-github">
-                <svg class="gh-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <svg class="gh-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
                 GitHub
               </a>
-              <!-- OPTION A — Live: -->
-              <!-- <a href="https://YOUR_LIVE_URL.com" target="_blank" class="pi-btn pi-btn-live">● Live Demo ↗</a> -->
-              <!-- OPTION B — Not live: -->
-              <span class="pi-btn pi-btn-inactive">Not deployed</span>
+              <a href="https://chanikyasaikumar.github.io/daybook-frontend/"
+                 target="_blank" class="pi-btn pi-btn-live">
+                ● Live Demo ↗
+              </a>
             </div>
           </div>
           <div class="pi-arrow">↗</div>
@@ -1059,21 +1060,46 @@ a.nav-brand { text-decoration: none; }
                 </svg>
                 GitHub
               </a>
-              <!-- OPTION A — If project is LIVE, use this: -->
               <a href="https://spendwise-git-main-chanikya668-4425s-projects.vercel.app/" target="_blank" class="pi-btn pi-btn-live">
                 ● Live Demo ↗
               </a>
-              <!-- OPTION B — If project is NOT live, use this instead of above: -->
-              <!-- <span class="pi-btn pi-btn-inactive">Not deployed</span> -->
             </div>
           </div>
           <div class="pi-arrow">↗</div>
         </div>
 
-        <!-- PROJECT 03 — Automated Task & Notification System -->
+        <!-- PROJECT 03 — GenoTek -->
         <div class="proj-item">
           <div>
             <div class="pi-num">03</div>
+            <div class="pi-title">GenoTek — AI Hiring Agent</div>
+            <div class="pi-desc">
+              Autonomous AI agent built on Gemini 2.5 Flash that ranks resumes against job
+              descriptions and detects AI-generated candidate responses — reducing manual
+              screening effort significantly.
+            </div>
+            <div class="pi-stack">
+              <span class="pi-pill">Python</span>
+              <span class="pi-pill">Gemini 2.5 Flash API</span>
+              <span class="pi-pill">NLP</span>
+              <span class="pi-pill">AI Agents</span>
+            </div>
+            <div class="pi-links">
+              <a href="https://github.com/Chanikyasaikumar/Hiring_Agent.git"
+                 target="_blank" class="pi-btn pi-btn-github">
+                <svg class="gh-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+              <span class="pi-btn pi-btn-inactive">Not deployed</span>
+            </div>
+          </div>
+          <div class="pi-arrow">↗</div>
+        </div>
+
+        <!-- PROJECT 04 — Automated Task & Notification System -->
+        <div class="proj-item">
+          <div>
+            <div class="pi-num">04</div>
             <div class="pi-title">Automated Task & Notification System</div>
             <div class="pi-desc">
               Email-to-Sheets Python automation pipeline with custom alert triggers
@@ -1090,19 +1116,16 @@ a.nav-brand { text-decoration: none; }
                 <svg class="gh-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 GitHub
               </a>
-              <!-- OPTION A — Live: -->
-              <!-- <a href="https://YOUR_LIVE_URL.com" target="_blank" class="pi-btn pi-btn-live">● Live Demo ↗</a> -->
-              <!-- OPTION B — Not live: -->
               <span class="pi-btn pi-btn-inactive">Not deployed</span>
             </div>
           </div>
           <div class="pi-arrow">↗</div>
         </div>
 
-        <!-- PROJECT 04 — Library Management System -->
+        <!-- PROJECT 05 — Library Management System -->
         <div class="proj-item">
           <div>
-            <div class="pi-num">04</div>
+            <div class="pi-num">05</div>
             <div class="pi-title">Library Management System</div>
             <div class="pi-desc">
               Flask + MongoDB backend app for library operations — book records,
@@ -1122,43 +1145,9 @@ a.nav-brand { text-decoration: none; }
                 </svg>
                 GitHub
               </a>
-              <!-- OPTION A — If project is LIVE, use this: -->
               <a href="https://library-management-system-64bk.onrender.com" target="_blank" class="pi-btn pi-btn-live">
                 ● Live Demo ↗
               </a>
-              <!-- OPTION B — If project is NOT live, use this instead of above: -->
-              <!-- <span class="pi-btn pi-btn-inactive">Not deployed</span> -->
-            </div>
-          </div>
-          <div class="pi-arrow">↗</div>
-        </div>
-
-        <!-- PROJECT 05 — Daybook -->
-        <div class="proj-item">
-          <div>
-            <div class="pi-num">05</div>
-            <div class="pi-title">Daybook — Personal Journaling App</div>
-            <div class="pi-desc">
-              Full-stack personal journaling web app with JWT auth, a streak/MindCoins
-              reward economy, mood tagging, and an AI journaling companion (Aspira)
-              powered by the Groq API. Most technically complex project to date.
-            </div>
-            <div class="pi-stack">
-              <span class="pi-pill">FastAPI</span>
-              <span class="pi-pill">MongoDB Atlas</span>
-              <span class="pi-pill">Groq API</span>
-              <span class="pi-pill">JWT Auth</span>
-            </div>
-            <div class="pi-links">
-              <a href="https://github.com/Chanikyasaikumar/daybook-backend"
-                 target="_blank" class="pi-btn pi-btn-github">
-                <svg class="gh-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-                GitHub
-              </a>
-              <!-- Backend is live at https://daybook-backend-gdd3.onrender.com — frontend not yet deployed -->
-              <span class="pi-btn pi-btn-inactive">Not deployed</span>
             </div>
           </div>
           <div class="pi-arrow">↗</div>
@@ -1212,17 +1201,7 @@ a.nav-brand { text-decoration: none; }
         </div>
       </div>
 
-      <!-- 2. Accenture — Data Analytics -->
-      <div class="cert-card">
-        <div class="cert-mark"></div>
-        <div>
-          <div class="cert-cn">Data Analytics & Visualization Job Simulation</div>
-          <div class="cert-ci">Accenture (via Forage)</div>
-          <div class="cert-cd">Apr 2024</div>
-        </div>
-      </div>
-
-      <!-- 3. AWS -->
+      <!-- 2. AWS -->
       <div class="cert-card">
         <div class="cert-mark"></div>
         <div>
@@ -1232,7 +1211,7 @@ a.nav-brand { text-decoration: none; }
         </div>
       </div>
 
-      <!-- 4. McKinsey -->
+      <!-- 3. McKinsey -->
       <div class="cert-card">
         <div class="cert-mark"></div>
         <div>
@@ -1242,13 +1221,23 @@ a.nav-brand { text-decoration: none; }
         </div>
       </div>
 
-      <!-- 5. IBM SQL -->
+      <!-- 4. IBM SQL -->
       <div class="cert-card">
         <div class="cert-mark"></div>
         <div>
           <div class="cert-cn">SQL and Relational Databases 101</div>
           <div class="cert-ci">Cognitive Class (IBM)</div>
           <div class="cert-cd">Jul 2024</div>
+        </div>
+      </div>
+
+      <!-- 5. Accenture — Data Analytics -->
+      <div class="cert-card">
+        <div class="cert-mark"></div>
+        <div>
+          <div class="cert-cn">Data Analytics & Visualization Job Simulation</div>
+          <div class="cert-ci">Accenture (via Forage)</div>
+          <div class="cert-cd">Apr 2024</div>
         </div>
       </div>
 
